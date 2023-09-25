@@ -1,0 +1,74 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background-image: url(desert_pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 55px;
+  margin-bottom: 1em;
+  color: rgb(26, 160, 26);
+}
+
+.btns {
+  display: flex;
+  gap: 120px;
+  margin-bottom: 200px;
+}
+
+.btn {
+  border: none;
+  padding: 1rem 4rem;
+  background: orange;
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -10px;
+  left: -10px;
+  /* background: teal; */
+  border-top: 4px solid orange;
+  border-left: 4px solid orange;
+  transition: all 0.25s;
+}
+
+.btn:hover:before,
+.btn:hover:after {
+  height: 100%;
+  width: 100%;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  bottom: -10px;
+  right: -10px;
+  border-bottom: 4px solid orange;
+  border-right: 4px solid orange;
+  transition: all 0.25s;
+}
