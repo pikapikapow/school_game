@@ -5,9 +5,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
 .container {
   height: 100vh;
-  background-image: url(desert_pic.jpg);
+  background-image: url(img/galaxy.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -17,12 +19,14 @@ body {
   align-items: center;
 }
 
+
+
 .title {
   font-weight: 800;
   text-transform: uppercase;
   font-size: 55px;
   margin-bottom: 1em;
-  color: rgb(26, 160, 26);
+  color: blue;
 }
 
 .btns {
@@ -40,6 +44,7 @@ body {
   text-transform: uppercase;
   position: relative;
   cursor: pointer;
+  width: 300px;
 }
 
 .btn:before {
@@ -71,4 +76,18 @@ body {
   border-bottom: 4px solid orange;
   border-right: 4px solid orange;
   transition: all 0.25s;
+}
+
+/* about page */
+
+.desc {
+  width: 500px;
+  background-color: darkblue;
+  color: white;
+  font-size: 20px;
+  padding: 40px 32px;
+  text-align: justify;
+  line-height: 1.8rem;
+  box-shadow: 10px 10px 5px lightblue;
+
 }
