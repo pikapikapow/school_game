@@ -91,7 +91,7 @@ body {
 
 }
 
-.card-area {
+.memory-game {
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 5px;
@@ -99,10 +99,18 @@ body {
 
 .card {
   width: 100px;
-
   height: 100px;
   /* background-image: url(img/sun2.jpg);
   background-repeat: no-repeat;
   background-size: contain; */
   background-color: red;
+  cursor: pointer;
+  transition: transform 0.5;
+  display: hidden;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+  background-color: blue;
+  display: block;
 }
