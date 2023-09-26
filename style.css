@@ -19,8 +19,6 @@ body {
   align-items: center;
 }
 
-
-
 .title {
   font-weight: 800;
   text-transform: uppercase;
@@ -35,7 +33,8 @@ body {
   margin-bottom: 200px;
 }
 
-.btn {
+.btn,
+.my_btn {
   border: none;
   padding: 1rem 4rem;
   background: orange;
@@ -90,4 +89,20 @@ body {
   line-height: 1.8rem;
   box-shadow: 10px 10px 5px lightblue;
 
+}
+
+.card-area {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 5px;
+}
+
+.card {
+  width: 100px;
+
+  height: 100px;
+  /* background-image: url(img/sun2.jpg);
+  background-repeat: no-repeat;
+  background-size: contain; */
+  background-color: red;
 }
