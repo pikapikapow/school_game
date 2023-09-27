@@ -102,7 +102,6 @@ body {
   height: 100px;
   cursor: pointer;
   position: relative;
-  background-color: black;
   transition: transform 0.1s;
 
 }
@@ -115,11 +114,21 @@ body {
 }
 
 .back {
-  visibility: hidden;
+  background-color: black;
 }
+
+.front {
+  background-color: orange;
+}
+
 
 
 
 .front:hover {
   transform: scale(0.97);
+}
+
+.flip {
+  /* transform: rotateX(180deg); */
+  background-color: blue;
 }
