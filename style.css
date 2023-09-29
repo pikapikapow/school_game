@@ -103,7 +103,7 @@ body {
   cursor: pointer;
   position: relative;
   transition: transform 0.1s;
-
+  transform-style: preserve-3d;
 }
 
 .back,
@@ -111,10 +111,12 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
+  backface-visibility: hidden;
 }
 
 .back {
   background-color: black;
+  transform: rotateY(180deg);
 }
 
 .front {
@@ -129,6 +131,6 @@ body {
 }
 
 .flip {
-  /* transform: rotateX(180deg); */
-  background-color: blue;
+  transform: rotateY(180deg);
+
 }

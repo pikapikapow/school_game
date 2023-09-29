@@ -2,9 +2,9 @@ const cards = document.querySelectorAll(".card")
 
 console.log(cards)
 
-const flipCard = (element) => {
-  element.classList.toggle("flip")
+function flipCard() {
+  this.classList.toggle("flip")
 }
 
-cards.forEach(card => card.addEventListener("click", flipCard(cards)))
+cards.forEach(card => card.addEventListener("click", flipCard))
 
