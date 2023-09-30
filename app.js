@@ -53,7 +53,9 @@ function unflipCards() {
 }
 
 function startOver() {
-  cards.forEach((card) => card.classList.remove("flip"))
+  // cards.forEach((card) => card.classList.remove("flip"))
+  // console.log(firstCard, secondCard, hasFlippedCard);
+  window.location.reload()
 }
 
 
