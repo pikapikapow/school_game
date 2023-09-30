@@ -1,4 +1,5 @@
 const cards = document.querySelectorAll(".card")
+const restart = document.getElementById("restart-btn")
 
 console.log(cards)
 
@@ -51,9 +52,15 @@ function unflipCards() {
   }, 1500);
 }
 
+function startOver() {
+  cards.forEach((card) => card.classList.remove("flip"))
+}
 
 
-cards.forEach(card => card.addEventListener("click", flipCard))
+
+cards.forEach((card) => card.addEventListener("click", flipCard))
+
+restart.addEventListener("click", startOver)
 
 
 
