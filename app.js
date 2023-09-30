@@ -24,9 +24,14 @@ function flipCard() {
     secondCard = this
     hasFlippedCard = false
   }
+  disableAllCards()
   checkCards()
 
 
+}
+
+function disableAllCards() {
+  cards.forEach((card) => card.removeEventListener("click", flipCard))
 }
 
 function checkCards() {
