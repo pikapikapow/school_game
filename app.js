@@ -66,7 +66,7 @@ function unflipCards() {
     firstCard.classList.remove('flip')
     secondCard.classList.remove('flip')
     blockBoard = false
-  }, 1500);
+  }, 1000);
 }
 
 function startOver() {
