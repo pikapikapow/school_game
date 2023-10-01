@@ -8,12 +8,17 @@ console.log(cards)
 let firstCard = null
 let secondCard = null
 let hasFlippedCard = false
-
+let blockBoard = false
 
 
 // card flip function
 
 function flipCard() {
+
+  if (blockBoard) return
+
+
+
   this.classList.add("flip")
 
   if (!hasFlippedCard) {
@@ -24,15 +29,13 @@ function flipCard() {
     secondCard = this
     hasFlippedCard = false
   }
-  disableAllCards()
+
   checkCards()
 
 
 }
 
-function disableAllCards() {
-  cards.forEach((card) => card.removeEventListener("click", flipCard))
-}
+
 
 function checkCards() {
   console.log(firstCard, secondCard);
@@ -51,9 +54,11 @@ function disableCards() {
 }
 
 function unflipCards() {
+  blockBoard = true
   setTimeout(function () {
     firstCard.classList.remove('flip')
     secondCard.classList.remove('flip')
+    blockBoard = false
   }, 1500);
 }
 
