@@ -1,5 +1,7 @@
 const cards = document.querySelectorAll(".card")
 const restart = document.getElementById("restart-btn")
+const counterEl = document.getElementById("count")
+console.log(counterEl);
 
 console.log(cards)
 
@@ -9,6 +11,9 @@ let firstCard = null
 let secondCard = null
 let hasFlippedCard = false
 let blockBoard = false
+let counter = 0
+
+
 
 
 // card flip function
@@ -28,6 +33,8 @@ function flipCard() {
   } else {
     secondCard = this
     hasFlippedCard = false
+    counter++
+    counterEl.innerHTML = counter
   }
 
   checkCards()
