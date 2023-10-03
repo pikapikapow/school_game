@@ -1,9 +1,16 @@
 const cards = document.querySelectorAll(".card")
 const restart = document.getElementById("restart-btn")
 const counterEl = document.getElementById("count")
-console.log(counterEl);
+// model elements
+const close = document.getElementById("close");
+const modal = document.getElementById("modal");
 
-console.log(cards)
+
+close.addEventListener("click", () => modal.classList.remove("show-modal"));
+
+// console.log(counterEl);
+
+// console.log(cards)
 
 // card comparing logic
 
@@ -12,7 +19,7 @@ let secondCard = null
 let hasFlippedCard = false
 let blockBoard = false
 let counter = 0
-
+let score = 0
 
 
 
@@ -34,8 +41,11 @@ function flipCard() {
     secondCard = this
     hasFlippedCard = false
     counter++
+
     counterEl.innerHTML = counter
   }
+
+
 
   checkCards()
 
@@ -44,16 +54,27 @@ function flipCard() {
 
 
 
+
 function checkCards() {
-  console.log(firstCard, secondCard);
   if (firstCard.dataset.planet === secondCard.dataset.planet) {
     disableCards()
+    score = score + 2
+    if (score === 16) {
+      winnerGreet()
+    }
     return
   } else {
     unflipCards()
   }
-
 }
+
+function winnerGreet() {
+  console.log("all matched!");
+  const modalShow = () => modal.classList.add("show-modal");
+  modalShow()
+}
+
+
 
 function disableCards() {
   firstCard.removeEventListener("click", flipCard)
