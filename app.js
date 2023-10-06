@@ -92,13 +92,14 @@ function unflipCards() {
   }, 1000);
 }
 
-let randomNumber
-function randomizeCards() {
-  randomNumber = Math.floor(Math.random() * 16)
 
-  cards.forEach((card) => card.style.order = randomNumber)
-}
-console.log(randomNumber);
+(function randomize() {
+  cards.forEach((card) => {
+    let randomizeNumber = Math.floor(Math.random() * cards.length)
+    card.style.order = randomizeNumber
+  })
+})()
+
 
 function startOver() {
   // cards.forEach((card) => card.classList.remove("flip"))
