@@ -72,6 +72,8 @@ function winnerGreet() {
   console.log("all matched!");
   const modalShow = () => modal.classList.add("show-modal");
   modalShow()
+  cards.forEach((card) => card.classList.remove("flip"))
+  startOver()
 }
 
 
@@ -90,10 +92,19 @@ function unflipCards() {
   }, 1000);
 }
 
+let randomNumber
+function randomizeCards() {
+  randomNumber = Math.floor(Math.random() * 16)
+
+  cards.forEach((card) => card.style.order = randomNumber)
+}
+console.log(randomNumber);
+
 function startOver() {
   // cards.forEach((card) => card.classList.remove("flip"))
   // console.log(firstCard, secondCard, hasFlippedCard);
   window.location.reload()
+
 }
 
 
