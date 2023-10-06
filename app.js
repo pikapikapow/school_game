@@ -36,9 +36,12 @@ function flipCard() {
   if (!hasFlippedCard) {
     hasFlippedCard = true
     firstCard = this
-
+    firstCard.removeEventListener("click", flipCard)
+    firstCard.style.cursor = "default"
     return
   } else {
+    firstCard.addEventListener("click", flipCard)
+    firstCard.style.cursor = "pointer"
     secondCard = this
     hasFlippedCard = false
     counter++
