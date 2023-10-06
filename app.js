@@ -36,6 +36,7 @@ function flipCard() {
   if (!hasFlippedCard) {
     hasFlippedCard = true
     firstCard = this
+
     return
   } else {
     secondCard = this
@@ -72,8 +73,11 @@ function winnerGreet() {
   console.log("all matched!");
   const modalShow = () => modal.classList.add("show-modal");
   modalShow()
-  cards.forEach((card) => card.classList.remove("flip"))
-  startOver()
+  setTimeout(function () {
+    cards.forEach((card) => card.classList.remove("flip"))
+    startOver()
+  }, 2000)
+
 }
 
 

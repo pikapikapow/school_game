@@ -15,8 +15,9 @@ body {
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 50px;
 }
 
 .title {
@@ -25,6 +26,9 @@ body {
   font-size: 55px;
   margin-bottom: 1em;
   color: blue;
+  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+  padding: 1rem 4rem;
+  border-radius: 10px;
 }
 
 .btns {
@@ -84,11 +88,11 @@ body {
   background-color: darkblue;
   color: white;
   font-size: 20px;
-  padding: 40px 32px;
+  padding: 50px 37px;
   text-align: justify;
   line-height: 1.8rem;
   box-shadow: 10px 10px 5px lightblue;
-
+  border-radius: 20px;
 }
 
 .card-area {
