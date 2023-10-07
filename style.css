@@ -109,8 +109,8 @@ body {
 
 
 .card {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   cursor: pointer;
   position: relative;
   transition: transform 0.1s;
@@ -212,4 +212,56 @@ body {
 /* JavaScript */
 .modal-container.show-modal {
   display: block;
+}
+
+@media screen and (max-height: 800px) {
+  .card {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
+@media screen and (max-width: 560px) {
+  .container {
+    align-items: center;
+    width: auto;
+    gap: 20px;
+  }
+
+  /* play page */
+  .card {
+    width: 70px;
+    height: 70px;
+  }
+
+  .modal {
+    width: 300px;
+  }
+
+  .my_btn,
+  .btn {
+    width: 200px;
+  }
+
+  /* about page */
+
+  .desc {
+    width: 290px;
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  /* home page */
+  .title {
+    width: 200px;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 70px;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 60px;
+  }
 }
