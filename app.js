@@ -6,8 +6,6 @@ const close = document.getElementById("close");
 const modal = document.getElementById("modal");
 
 
-close.addEventListener("click", () => modal.classList.remove("show-modal"));
-
 // console.log(counterEl);
 
 // console.log(cards)
@@ -19,7 +17,7 @@ let secondCard = null
 let hasFlippedCard = false
 let blockBoard = false
 let counter = 0
-let score = 0
+let matchedCards = 0
 
 
 
@@ -28,9 +26,6 @@ let score = 0
 function flipCard() {
 
   if (blockBoard) return
-
-
-
   this.classList.add("flip")
 
   if (!hasFlippedCard) {
@@ -49,11 +44,7 @@ function flipCard() {
     counterEl.innerHTML = counter
   }
 
-
-
   checkCards()
-
-
 }
 
 
@@ -62,8 +53,8 @@ function flipCard() {
 function checkCards() {
   if (firstCard.dataset.planet === secondCard.dataset.planet) {
     disableCards()
-    score = score + 2
-    if (score === 16) {
+    matchedCards = matchedCards + 2
+    if (matchedCards === 16) {
       winnerGreet()
     }
     return
@@ -121,5 +112,7 @@ cards.forEach((card) => card.addEventListener("click", flipCard))
 
 restart.addEventListener("click", startOver)
 
+
+close.addEventListener("click", () => modal.classList.remove("show-modal"));
 
 
