@@ -64,7 +64,7 @@ function checkCards() {
 }
 
 function winnerGreet() {
-  console.log("all matched!");
+  // console.log("all matched!");
   const modalShow = () => modal.classList.add("show-modal");
   modalShow()
   setTimeout(function () {
@@ -100,10 +100,7 @@ function unflipCards() {
 
 
 function startOver() {
-  // cards.forEach((card) => card.classList.remove("flip"))
-  // console.log(firstCard, secondCard, hasFlippedCard);
   window.location.reload()
-
 }
 
 
