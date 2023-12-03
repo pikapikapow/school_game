@@ -112,7 +112,9 @@ if (restart) {
 }
 
 
+if (close) {
+  close.addEventListener("click", () => modal.classList.remove("show-modal"));
+}
 
-close.addEventListener("click", () => modal.classList.remove("show-modal"));
 
 
