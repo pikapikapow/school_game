@@ -107,7 +107,10 @@ function startOver() {
 
 cards.forEach((card) => card.addEventListener("click", flipCard))
 
-restart.addEventListener("click", startOver)
+if (restart) {
+  restart.addEventListener("click", startOver)
+}
+
 
 
 close.addEventListener("click", () => modal.classList.remove("show-modal"));
