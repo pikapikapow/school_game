@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <button class="my_btn" id="restart-btn">Restart</button>
+
+      <div class="card-area">
+        <div class="card" data-planet="earth">
+          <img src="./img/earth.png" class="back" />
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="venus">
+          <img src="./img/venus.png" class="back" />
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="mercury">
+          <img src="./img/mercury.png" class="back" />
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="earth">
+          <p class="name back">Earth</p>
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="jupiter">
+          <img src="./img/jupiter.png" class="back" />
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="saturn">
+          <img src="./img/saturn.png" class="back" />
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="uranus">
+          <img src="./img/uranus.jpg" class="back" />
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="mercury">
+          <p class="name back">Mercury</p>
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="neptune">
+          <img src="./img/neptune.png" class="back" />
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="uranus">
+          <p class="name back">Uranus</p>
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="saturn">
+          <p class="name back">Saturn</p>
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="mars">
+          <img src="./img/mars.png" class="back" />
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="mars">
+          <p class="name back">Mars</p>
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="venus">
+          <p class="name back">Venus</p>
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="jupiter">
+          <p class="name back">Jupiter</p>
+          <img src="./img/sun.png" class="front" />
+        </div>
+        <div class="card" data-planet="neptune">
+          <p class="name back">Neptune</p>
+          <img src="./img/sun.png" class="front" />
+        </div>
+      </div>
+      <div class="turns"><span>Turns: </span><span id="count">0</span></div>
+      <!-- modal -->
+      <section class="modal-container" id="modal">
+        <section class="modal">
+          <button class="close-btn" id="close">x</button>
+          <div class="modal-content">
+            <h1>You Won! 👍👍👍</h1>
+          </div>
+        </section>
+      </section>
+
+      <a href="index.html"><button class="btn">Back</button></a>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

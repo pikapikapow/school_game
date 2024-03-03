@@ -115,6 +115,9 @@ body {
   position: relative;
   transition: transform 0.1s;
   transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card img {
@@ -132,7 +135,23 @@ body {
 .back {
   background-color: black;
   transform: rotateY(180deg);
+  border-radius: 10%;
 }
+
+.name, .descr {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: black 2px solid;
+}
+
+.descr {
+  font-size: 13px;
+}
+
+
 
 .front {
   background-color: orange;
