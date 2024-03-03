@@ -136,6 +136,7 @@ body {
   background-color: black;
   transform: rotateY(180deg);
   border-radius: 10%;
+  text-align: center;
 }
 
 .name, .descr {
@@ -151,10 +152,16 @@ body {
   font-size: 12px;
 }
 
-
+.namee {
+background: none;
+  z-index: 10;
+  position: absolute;
+  color: white;
+}
 
 .front {
   background-color: orange;
+  position: relative;
 }
 
 
